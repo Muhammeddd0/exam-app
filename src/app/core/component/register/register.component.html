@@ -1,0 +1,115 @@
+<div class="container p-5">
+  <div class="inner">
+    <form [formGroup]="register" (ngSubmit)="onSubmit()" class="p-5">
+      <h2 class="mb-4">Sign up</h2>
+
+      <!-- Username -->
+      <div class="col-md-12">
+        <input
+          pInputText
+          formControlName="username"
+          class="w-75 mb-3"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('username') }"
+          placeholder="User Name"
+        />
+      </div>
+
+      <!-- First Name -->
+      <div class="col-md-12">
+        <input
+          pInputText
+          formControlName="firstName"
+          class="w-75 mb-3"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('firstName') }"
+          placeholder="First Name"
+        />
+      </div>
+
+      <!-- Last Name -->
+      <div class="col-md-12">
+        <input
+          pInputText
+          formControlName="lastName"
+          class="w-75 mb-3"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('lastName') }"
+          placeholder="Last Name"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="col-md-12">
+        <input
+          pInputText
+          formControlName="email"
+          class="w-75 mb-4"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('email') }"
+          placeholder="Email"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="col-md-12 w-75 mb-3">
+        <p-password
+          formControlName="password"
+          [toggleMask]="true"
+          class="p-fluid"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('password') }"
+          placeholder="Password"
+        ></p-password>
+        <div class="text-danger" *ngIf="isFieldInvalid('password')">
+          Password must:
+          <ul>
+            <li>Start with an uppercase letter.</li>
+            <li>Contain at least one number.</li>
+            <li>Contain at least one special character.</li>
+            <li>Be 8-20 characters long.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="col-md-12 w-75 mb-3">
+        <p-password
+          formControlName="rePassword"
+          [toggleMask]="true"
+          class="p-fluid"
+          placeholder="Confirm Password"
+        ></p-password>
+        <p class="text-danger" *ngIf="register.hasError('passwordsMismatch')">
+          Passwords do not match.
+        </p>
+      </div>
+
+      <!-- Phone -->
+      <div class="col-md-12 w-75 mb-3">
+        <input
+          type="text"
+          formControlName="phone"
+          pInputText
+          class="w-100"
+          [ngClass]="{ 'is-invalid': isFieldInvalid('phone') }"
+          placeholder="Phone Number"
+        />
+      </div>
+      <div class="text-center w-75">
+        <p class="text-dark w-100 fw-medium m-0 fs-6">
+          Already have an account?
+          <span>
+            <a routerLink="/auth/login" class="text-decoration-none">Login</a>
+          </span>
+        </p>
+      </div>
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="mt-5 text-center w-75 py-3"
+        [disabled]="register.invalid"
+      >
+       Create an account 
+      </button>
+    </form>
+
+    <p class="text-success">{{ msg }}</p>
+    <p class="text-danger">{{ errmsg }}</p>
+  </div>
+</div>

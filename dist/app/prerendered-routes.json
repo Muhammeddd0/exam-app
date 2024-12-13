@@ -1,0 +1,14 @@
+{
+  "routes": [
+    "/",
+    "/auth",
+    "/auth/create-new-password",
+    "/auth/login",
+    "/auth/register",
+    "/auth/reset",
+    "/auth/verify",
+    "/dashboard",
+    "/home",
+    "/quiz"
+  ]
+}

@@ -1,0 +1,39 @@
+form button{
+    background-color: var(--main-color); 
+    color: #fff;
+    border-radius: 25px;
+    padding: 8px;
+    box-shadow: 0 18px 30px 0 #2F1C1C1A ;
+ 
+ }
+
+
+ input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  h2{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+
+  }
+
+  .is-invalid {
+    border: 1px solid red !important;
+  }
+  
+
+  p span {
+    color: var(--main-color);
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+  }
+
+  p{
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+  }

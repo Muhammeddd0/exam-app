@@ -1,0 +1,36 @@
+<ul class="side-nav list-unstyled p-4" >
+  <li>
+    <a>
+      <img class="mx-auto logo" src="./assets/Final Logo 1.png" alt="" />
+    </a>
+  </li>
+
+  <div class="mt-5">
+    <li
+      *ngFor="let item of menuItems; let i = index"
+      [ngClass]="{ active: selectedItem === i }"
+      (click)="setActiveItem(i)"
+      class="menu-item mt-4">
+      <a
+        *ngIf="item.routerLink"
+        class="d-flex align-items-center text-decoration-none"
+        [routerLink]="item.routerLink">
+        <i [class]="item.icon + ' fs-3 me-3'"></i>
+        <span class="m-0 fw-bold">{{ item.label }}</span>
+      </a>
+      <a
+        *ngIf="item.label === 'Logout'"
+        class="d-flex align-items-center text-decoration-none"
+        href="#"
+        (click)="showConfirmPopup($event)">
+        <i [class]="item.icon + ' fs-3 me-3'"></i>
+        <span class="m-0 fw-bold">{{ item.label }}</span>
+       
+      </a>
+    </li>
+  </div>
+</ul>
+
+
+
+<p-confirmPopup></p-confirmPopup>

@@ -1,0 +1,30 @@
+<div class="container h-75 d-flex flex-column justify-content-center align-items-center">
+    <div class="col-md-12 w-75">
+      <h2 class="mb-5">Verify code</h2>
+      <form [formGroup]="verify" (ngSubmit)="onSubmit()">
+        <!-- Email Input -->
+        <input
+          pInputText
+          formControlName="resetCode"
+          class="w-100 mb-2"
+         
+          placeholder="Enter Code"
+        />
+
+        <div class="text-end m-0" >
+            <p class="m-0">
+                Didn’t receive a code? <span>Resend</span>
+            </p>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="mt-5 text-center w-100 py-3" >
+            Verify
+        </button>
+      </form>
+  
+      <p *ngIf="message" class="text-center mt-3 alert alert-success p-1">{{message}}</p>
+      <p *ngIf="errormsg" class="text-center mt-3 alert alert-danger p-1">{{errormsg}}</p>
+    </div>
+  </div>
+  

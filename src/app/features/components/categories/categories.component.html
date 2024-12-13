@@ -1,0 +1,25 @@
+<div class="container categories-cover ">
+   
+ <div class="inner">
+    <div class="row">
+        <div class="d-flex justify-content-between">
+            <h5 class="mb-4">Quizes</h5>
+            <h5>View All </h5>
+        </div>
+        <div class="col-md-4 mb-3" *ngFor="let sub of subjects">
+            <a>
+              <div class="relative image-container">
+                <img [src]="sub.icon" alt="{{ sub.name }}" class="img-fluid">
+                <div class="overlay">
+                  <h2>{{ sub.name }}</h2>
+                  <p>Some description here</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+          
+
+    </div>
+ </div>
+</div>

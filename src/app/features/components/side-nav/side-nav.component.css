@@ -1,0 +1,40 @@
+.logo {
+  width: 150px;
+}
+
+.menu-item a {
+  display: flex; 
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 12px; 
+}
+
+.menu-item i {
+  color: var(--main-color); 
+  margin-right: 12px; 
+}
+
+.menu-item span {
+  color: #696f79;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  line-height: 30px;
+  white-space: nowrap;
+}
+
+
+.menu-item.active {
+  background-color: #4461f2;
+  color: #fff; 
+  border-radius: 10px;
+  width: 220px;
+ 
+}
+
+.menu-item.active i,
+.menu-item.active span {
+  color: #fff;
+}
+
+

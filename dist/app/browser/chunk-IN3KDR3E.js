@@ -1,0 +1,1 @@
+import{Sa as o,Ta as i,Y as n,hb as s,lb as a}from"./chunk-HTWP6J2Z.js";var u=(()=>{class e{static{this.\u0275fac=function(t){return new(t||e)}}static{this.\u0275cmp=n({type:e,selectors:[["app-quizes"]],standalone:!0,features:[a],decls:2,vars:0,template:function(t,p){t&1&&(o(0,"p"),s(1,"quizes works!"),i())}})}}return e})();export{u as QuizesComponent};

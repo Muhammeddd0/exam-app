@@ -1,0 +1,60 @@
+<div class="container p-5">
+    <div class="inner p-5">
+      <h2 class="mb-4">Sign in</h2>
+
+      <form [formGroup]="login" (ngSubmit)="onSubmit()">
+        <!-- Email Input -->
+        <div class="col-md-12">
+          <input
+            pInputText
+            id="email"
+            aria-describedby="email-help"
+            formControlName="email"
+            class="w-75 mb-4"
+            placeholder="Enter Email"
+            [ngClass]="{
+              'border-danger': login.get('email')?.invalid && login.get('email')?.touched,
+              'border-success': login.get('email')?.valid && login.get('email')?.touched
+            }"
+          />
+        </div>
+  
+        <!-- Password Input -->
+        <div class="col-md-12 w-75 mb-2">
+          <p-password
+            formControlName="password"
+            [toggleMask]="true"
+            class="p-fluid"
+            placeholder="Password"
+            [ngClass]="{
+              'border-danger': login.get('password')?.invalid && login.get('password')?.touched,
+              'border-success': login.get('password')?.valid && login.get('password')?.touched
+            }"
+          ></p-password>
+        </div>
+
+
+       <div >
+        <a  class="reset-btn d-block w-75 text-end mb-3" routerLink="/auth/reset">
+            Forget Password ?
+        </a>
+      
+       </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="mt-5 text-center w-75 py-3 " [disabled]="login.invalid">Sign In</button>
+      </form>
+
+
+  <div class="w-75">
+    <p class="text-danger text-center my-3  w-100">
+      {{errormsg}}
+    </p>
+    <p class="text-success text-center my-3  w-100">
+      {{msg}}
+    </p>
+
+  </div>
+    </div>
+  </div>
+  

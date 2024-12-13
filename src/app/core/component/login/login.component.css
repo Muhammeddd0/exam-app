@@ -1,0 +1,43 @@
+h2{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+form button{
+   background-color: var(--main-color); 
+   color: #fff;
+   border-radius: 25px;
+   padding: 8px;
+   box-shadow: 0 18px 30px 0 #2F1C1C1A ;
+
+}
+
+
+
+input:focus, p-password:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+
+
+  
+
+  
+  .border-danger {
+    border: 1px solid red !important; 
+  }
+  
+  .border-success {
+    border: 1px solid green !important; 
+  }
+  .reset-btn{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 400;
+    line-height: 24px;
+
+  }

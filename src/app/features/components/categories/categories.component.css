@@ -1,0 +1,64 @@
+img{
+    width: 330px;
+    height: 293px;
+}
+.categories-cover{
+    background-color: #fff;
+    border-radius: 20px;
+    
+
+}
+h5{
+    color: var(--main-color);
+}
+.inner{
+    padding: 70px;
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .img-fluid {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 20px; /* Start at the bottom */
+    left: 50%;
+    transform: translateX(-50%) translateY(100%); /* Start outside the container */
+    width: 90%;
+    background: #1935CA66; 
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 8px;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Ensure it's not visible or focusable */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth transition for slide and fade */
+  }
+  
+  .image-container:hover .overlay {
+    transform: translateX(-50%) translateY(0); /* Slide up to visible position */
+    opacity: 1; /* Make visible */
+    visibility: visible;
+  }
+  
+  
+  
+  h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
